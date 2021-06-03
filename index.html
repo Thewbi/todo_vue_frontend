@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="font-styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Todo List</h1>
+        <section id="create" class="container">
+            <form id="create-form" ref="create-form">
+                <div>
+                    <label for="title" class="upper-label">Title</label>
+                    <div style="height: 32px">
+                        <input id="title" name="title" type="text" v-model="title" class="text-input" />
+                    </div>
+                    <label class="lower-label">Enter the title of the new Todo here</label>
+                </div>
+                <div style="padding-top: 20px">
+                    <label for="description" class="upper-label">Description</label>
+                    <textarea id="description" name="description" type="text" v-model="description" class="text-input"
+                        rows="4"></textarea>
+                    <label class="lower-label">Enter the description of the new Todo here</label>
+                </div>
+            </form>
+
+            <div style="padding-top: 20px">
+                <button type="button" id="create" @click="createTodoAPIData()" class="btn">
+                    Add
+                </button>
+            </div>
+        </section>
+        <section id="retrieve">
+            <div v-if="responseAvailable == true">
+                <ul class="no-bullets">
+                    <li v-for="todo in result">
+                        <div class="container flex-box">
+                            <p>{{ todo.title }} - {{ todo.description }}</p>
+                            <span style="padding-left: 30px">
+                                <button type="button" id="delete" @click="deleteTodoAPIData(todo.id)" class="btn">
+                                    Delete
+                                </button>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+<!-- Vue and Custom JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="scripts.js"></script>
+
+</html>

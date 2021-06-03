@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  font-family: "CircularStdBook";
+  font-weight: normal;
+  font-size: 15px;
+  color: #172b4d;
+}
+
+body {
+  background-color: grey;
+}
+
+.text-input {
+  border: 1px solid #dfe1e6;
+  border-radius: 3px;
+  color: #172b4d;
+  background: #f4f5f7;
+  font-family: "CircularStdBook";
+  font-weight: normal;
+  font-size: 15px;
+  height: 100%;
+  width: 100%;
+  line-height: 1.15;
+}
+
+.text-input:hover {
+  border: 1px solid #5b5888;
+  background: #ebecf0;
+}
+
+.text-input:focus {
+  border: 1px solid #5b5888;
+  background: #f4f5f7;
+}
+
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  background-color: white;
+  padding: 30px;
+}
+
+.upper-label {
+  display: block;
+  font-family: CircularStdMedium;
+  font-weight: normal;
+  font-size: 14px;
+  color: #5e6c84;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+.lower-label {
+  display: block;
+  font-size: 12px;
+  color: #5e6c84;
+  padding-top: 6px;
+  width: 100%;
+}
+
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+.btn {
+  border: 1px solid #dfe1e6;
+  border-radius: 3px;
+  color: #172b4d;
+  background: #f4f5f7;
+  font-family: "CircularStdBook";
+  font-weight: normal;
+  font-size: 15px;
+  padding: 5px 15px 5px 15px;
+}
+
+.btn-no-border {
+  border: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  outline: 0px dashed blue;
+  align-items: center;
+}
